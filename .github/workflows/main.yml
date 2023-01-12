@@ -1,0 +1,26 @@
+on:
+# Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      # This is the path of your notebooks in Git.  Currently, this is not recursively deploying notebooks
+      GIT_NOTEBOOK_PATH:
+        description: 'Notebooks Relative Path in Git'
+        required: true
+        default: '/mlflow'
+
+      # This is where in your Databricks workspace your notebooks will be deployed
+      # Typically this is under a Folder under the Workspace and not under a specific user's folder
+      NOTEBOOK_DEPLOYMENT_PATH:
+        description: 'Notebooks Deployment Path to Databricks'
+        required: true
+        default: '/mlflow poc'
+
+#       # This resource group for the Databricks workspace and KeyVault
+      RESOURCE_GROUP:
+        description: 'Resource Group Name'
+        required: true
+        default: 'RG_DataScience'
