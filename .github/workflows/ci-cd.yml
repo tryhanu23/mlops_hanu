@@ -24,3 +24,15 @@ on:
         description: 'Resource Group Name'
         required: true
         default: 'RG_DataScience'
+        
+      # The Azure region to which to deploy your resources
+      LOCATION:
+        description: 'Azure Region'
+        required: true
+        default: 'Central India'
+
+      # This is the name of your Azure Databricks resource
+      WORKSPACE_NAME:
+        description: 'Databricks workspace name'
+        required: true
+        default: 'dev'
