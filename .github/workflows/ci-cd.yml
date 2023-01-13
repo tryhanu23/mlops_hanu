@@ -78,3 +78,24 @@ jobs:
       with:
         name: 'notebooks'
         path: '${{ github.workspace }}/notebooks'
+        
+    # Publish Artifact: Databricks-Jobs
+    - name: 'Publish Artifact: Databricks-Jobs' 
+      uses: actions/upload-artifact@v2
+      with:
+        name: 'jobs'
+        path: '${{ github.workspace }}/jobs'
+
+    # Publish Artifact: Databricks-Init-Scripts
+    - name: 'Publish Artifact: Databricks-Init-Scripts' 
+      uses: actions/upload-artifact@v2
+      with:
+        name: 'init-scripts'
+        path: '${{ github.workspace }}/init-scripts'
+
+    # Publish Artifact: Databricks-Deployment-Scripts
+    - name: 'Publish Artifact: Databricks-Deployment-Scripts' 
+      uses: actions/upload-artifact@v2
+      with:
+        name: 'deployment-scripts'
+        path: '${{ github.workspace }}/deployment-scripts'
