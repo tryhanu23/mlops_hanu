@@ -107,11 +107,11 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     env:
-      resourceGroupName: 'Databricks-MyProject-MG-Dev'
-      databricksWorkspaceName: 'Databricks-MyProject-MG-Dev'
+      resourceGroupName: 'DatascienceRG'
+      databricksWorkspaceName: 'Dev'
       keyVaultName: 'KeyVault-MyProject7-Dev'
-      NotebookDeploymentPath: '/MyProject'
-      GitNotebookPath: 'notebooks/MyProject'
+      NotebookDeploymentPath: '/mlflow poc'
+      GitNotebookPath: '/mlflow'
 
     steps:
     # Show the environment variables for debugging
@@ -123,11 +123,11 @@ jobs:
         azPSVersion: '3.1.0'        
 
     # Download Artifact: ARM-Templates
-    - name: 'Download Artifact: ARM-Templates' 
+    - name: 'Download Artifact: ARM-templates' 
       uses: actions/download-artifact@v2
       with:
         name: 'ARM-Templates'
-        path: ${{ github.workspace }}/ARM-Templates
+        path: ${{ github.workspace }}/ARM-templates
 
     # Download Artifact: Databricks-Clusters
     - name: 'Download Artifact: Databricks-Clusters' 
