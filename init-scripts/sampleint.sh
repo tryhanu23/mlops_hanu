@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Init-Script Started"
+echo "Init-Script Started" 
 
 echo $DB_IS_DRIVER
 if [[ $DB_IS_DRIVER = "TRUE" ]]; then
