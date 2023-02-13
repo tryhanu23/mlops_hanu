@@ -158,4 +158,4 @@ find . -type f -name "*" -print0 | while IFS= read -r -d '' file; do
     fi     
     echo ""  
 
-done
+
