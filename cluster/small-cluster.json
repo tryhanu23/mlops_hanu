@@ -1,4 +1,4 @@
-{
+{     
     "num_workers": 0,
     "cluster_name": "Small",
     "spark_version": "10.5.x-cpu-ml-scala2.12",
