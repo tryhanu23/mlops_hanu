@@ -1,6 +1,5 @@
 name: Databricks-Infra-Deploy  
 
-
 # Manual trigger with parameters
 on:
   workflow_dispatch:
