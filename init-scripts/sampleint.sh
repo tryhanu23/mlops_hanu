@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Init-Script Started" 
 
 echo $DB_IS_DRIVER
