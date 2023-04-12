@@ -62,7 +62,7 @@ jobs:
     - name: 'Publish Artifact: ARM-Templates' 
       uses: actions/upload-artifact@v2
       with:
-        name: 'ARM-Templates'
+        name: 'ARM-templates'
         path: '${{ github.workspace }}/ARM-Templates'
 
     # Publish Artifact: Databricks-Clusters
